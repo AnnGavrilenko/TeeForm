@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea form</title>
+    <script src="js/form-buttons.js"></script>
+    <script src="js/textfields-style.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/table-results.js"></script>
+    <link rel="stylesheet" href="form-style.css">
+</head>
+
+<body>
+    <header>
+       Tea's World
+    </header>
+ <!-- Всплывающее окно -->
+ <div id="resultsModal" class="modal">
+    <div class="modal-content">
+        <!--Кнопка закрытия-->
+        <span class="close">&times;</span>
+        <center> <h2>Результаты</h2></center>
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>Вопрос</th>
+                    <th>Ответ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Здесь будут строки таблицы -->
+            </tbody>
+        </table>
+    </div>
+</div>
+<nav>
+    <a href="https://flowwow.com/blog/vidy-i-sorta-chaya/" target="_blank">Виды чая</a>
+    <a href="https://12sanepid.ru/press/publications/5192.html" target="_blank">Польза чая</a>
+    <a href="https://12sanepid.ru/press/publications/5192.html" target="_blank">Интересные факты</a>
+</nav>
+    <div class="lieves">  
+
+    <div class="cupFoneForm" id="fone">
+    <form id="TeaServery">
+        <div class="button-container">
+        <button type="button" id="russianButton">Русский</button>
+        <button type="button" id="englishButton">English</button>
+        <button type="button" id="resultButton">Показать результаты</button>
+        </div>
+         <!-- Выпадающий список -->
+         <label for="dropdown" id="dropdownLabel">Выберите вариант стилизации:</label>
+         <select id="dropdown" name="dropdown">
+             <option value="option1">День</option>
+             <option value="option2">Ночь</option>
+             <option value="option3">Серпия</option>
+         </select>
+
+        <!-- label связывает ярлык с элементом формы -->
+        <label for="textInput" id="textInputLabel" name="Label1" >Ваш любимый сорт чая:</label>
+        <!-- type что вводим, name имя элемента при отправке 
+     на сервер id связываем с label -->
+        <input type="text" id="textInput" name="textInput">
+
+        <label for="textInput2"  id="textInput2Label" name="Label2">С чем вы предпочитаете пить чай?</label>
+        <input id="textInput2" type="text" name="textInput2">
+
+        <label for="textInput3"  id="textInput3Label" name="Label3">Страна-производитель вашего любимого чая:</label>
+        <input id="textInput3" type="text" name="textInput3">
+    </form>
+</div>
+
+</div>
+<aside>
+    <img src="resource/side.png">
+</aside>
+    <footer>Choose your flavor</footer>
+</body>
+
+</html>

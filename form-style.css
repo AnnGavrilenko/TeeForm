@@ -1,0 +1,248 @@
+@font-face {
+	font-family: 'Comfortaa';
+	src: url('fonts/fonts/comfortaa.eot'), /* IE 9 Compatibility Mode */
+		url('fonts/fonts/comfortaa.woff2') format('woff2'), /* Super Modern Browsers */
+		url('fonts/fonts/comfortaa.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('fonts/fonts/comfortaa.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('fonts/fonts/comfortaa.svg') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+body {
+    padding-right: 0;
+    font-family: 'Comfortaa', sans-serif; /* Применение шрифта */
+}
+
+.lieves {
+    background-image: url(resource/DeWatermark.ai_1729592382765.png);
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+header {
+    position: fixed; /* Закрепляет header при скроллинге */
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    
+    color: #5da130;
+   padding-top: 10px;
+   font-size: 30px;
+   z-index: 1000; /* Устанавливает уровень наложения, чтобы header был поверх других элементов */
+}
+
+footer {
+    position: fixed; /* Закрепляет header при скроллинге */
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    
+    color: #5da130;
+   padding-bottom: 10px;
+   font-size: 30px;
+   z-index: 1000; /* Устанавливает уровень наложения, чтобы header был поверх других элементов */
+}
+
+aside {
+    position: fixed;
+    right: 0;
+    top: 30%;
+    display: block;
+    width: 40%;
+    transform: rotate(-90deg);
+
+}
+
+nav {
+    position: fixed;
+    margin-left: 10%;
+    left: 0;
+    top: 40%;
+    display: flex;
+    flex-direction: column; /* Располагает ссылки одна под другой */
+    align-items: center; /* Центрирует ссылки */
+    width: 20%;
+    border: 2px solid black;
+}
+
+nav a {
+    color: black; /* Черный цвет ссылок */
+    text-decoration: none; /* Убирает подчеркивание */
+    padding: 10px 0; /* Отступы между ссылками */
+    font-size: 25px; /* Размер шрифта */
+    transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+nav a:hover {
+    color: green; /* Зеленый цвет при наведении */
+}
+/* Модальное окно */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Полупрозрачный фон */
+    animation: slide-down 0.8s ease-out; /* Добавляем анимацию */
+    
+}
+/* Анимация для появления модального окна */
+@keyframes slide-down {
+    from {
+        top: -100%;
+    }
+    to {
+        top: 50%; /* Центрирование по вертикали */
+        transform: translateY(-50%);
+    }
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 20px;
+   
+   
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px;
+   
+    
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+   
+}
+
+th {
+    background-color: rgb(220, 241, 220);
+    text-align: center;
+}
+
+aside img{
+width: 100%;
+border-radius: 30px;
+}
+
+
+.cupFoneForm {
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    position: relative;
+    width: 30%;
+    background-color: #5da130;
+/*background-image: url(resource/фон\ формы\ новый\ блюр.png)
+background-size: 60% contain; /* Обеспечивает видимость всего изображения 
+background-repeat: no-repeat;
+background-position: center;;*/
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 25px; /* Скругленные углы */
+overflow: hidden; /* Обеспечивает скругление углов у фона */
+}
+
+
+form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.button-container {
+   margin: 10%;
+    display: flex;
+    justify-content: space-around;
+    width: 100%
+}
+
+form button {
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: white;
+    color: black;
+}
+
+form select {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: white;
+    color: black;
+    border-radius: 12px;
+    padding: 10px;
+    
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+form input[type="text"] {
+    border: 2px solid white;
+    padding: 10px;
+   margin-bottom: 5%;
+    border-radius: 12px;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    border: 2px solid rgb(0, 0, 0); 
+}
+
+input[type="text"]:focus {
+    border: none; /* Увеличенная граница */
+    transform: scale(1.1);    /* Увеличенный размер */
+    outline: none; /* Убираем стандартное выделение */
+}
+
+form label {
+    display: block;
+    margin: 10px;
+    font-size: 30px;
+    color: black;
+    font-size: 20px;
+}
+
+button[type="button"] {
+    display: inline-block;
+}
